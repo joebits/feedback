@@ -27,7 +27,7 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
-if (process.env.NODE_ENV === ' produciton') {
+if (process.env.NODE_ENV === 'production') {
     const path = require('path');
 
     //Express will serve up production assets
@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === ' produciton') {
     //Express serves index.html if it doesn't recognize the route
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-    })
+      });
 }
 
 const PORT = process.env.PORT || 5000;
