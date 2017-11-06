@@ -6,9 +6,8 @@ const Landing = () => {
             <h1>
                 Feedback
             </h1>
-                Collect feedback from users
+            Collect feedback from users
             </div>
-
     );
 }
 
